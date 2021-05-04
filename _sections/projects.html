@@ -1,0 +1,11 @@
+---
+heading: Projects
+subtitle: Don't tell me what you think, show me what you've done.
+---
+
+{% for project in site.data.projects %}
+<div>
+  <a href="{{project.link}}"><h3>{{project.name}}</h3></a>
+  <p>{{project.description}}</p>
+</div>
+{% endfor %}

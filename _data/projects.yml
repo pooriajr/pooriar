@@ -1,0 +1,15 @@
+- name: 💙 Fan Favorite
+  link: https://fanfavorite.io
+  description: Ridiculously frictionless open polls for creators and their audience.
+
+- name: 📱 Mobile First
+  link: https://pooriar.github.io/mobile-first/
+  description: A tiny stylesheet to help you keep mobile in mind while building on desktop.
+
+- name: 🏃‍♂️One Week To Make
+  link: https://oneweektomake.com
+  description: The internet gave me app ideas and voted on their favorites. I built the winner in 1 week.
+
+- name: 🗓 Habit Helper
+  link: https://habit-helper.netlify.app
+  description: Gamified habit tracking tracking in a calendar view.

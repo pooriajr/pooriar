@@ -1,0 +1,35 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Pooria R</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    {% feed_meta %}
+    {% seo %}
+    <script async defer data-domain="pooriar.com" src="https://plausible.io/js/plausible.outbound-links.js"></script>
+  </head>
+
+  <body class="flow">
+
+    <h1>Pooria R</h1> 
+    <p>Sharing my work.</p>
+    <small>Last updated {% last_modified_at %B %d, %Y %}.</small>
+
+    {% for section in site.sections %}
+      <section class="flow">
+        <h2>{{section.heading}}</h2>
+        <small>{{section.subtitle}}</small>
+        {{section.content | markdownify}}
+      </section>
+    {% endfor %}
+
+    <footer>
+      <small>Made with <del>♡</del> Jekyll</small>
+    </footer>
+
+  </body>
+</html>

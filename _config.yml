@@ -1,0 +1,14 @@
+collections: 
+  sections:
+    order:
+      - projects.html
+      - tech.md
+      - languages.md
+      - travel.md
+      - music.md
+      - people.md
+      - books.md
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
