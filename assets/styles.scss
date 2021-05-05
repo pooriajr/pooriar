@@ -1,0 +1,78 @@
+---
+---
+@import "native.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+  line-height: 1.5;
+}
+
+a {
+  color: dodgerblue;
+  text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  margin: 0;
+}
+
+pre {
+  padding: 15px;
+  @extend .rounded
+}
+
+.flow > * + * {
+  margin-top: 1.5rem;
+}
+
+.rounded {
+  border-radius: 6px;
+}
+
+.wrapper {
+  padding: 1.5rem;
+}
+
+.button {
+  border: none;
+  background: dodgerblue;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}
+
+section {
+  @extend .wrapper
+  @extend .rounded
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, .15);
+}
+
+footer {
+  @extend .wrapper
+  text-align: center;
+}
+
+.embeddable-buttondown-form {
+  label{
+    font-weight: bold;
+  }
+  input {
+    height: 35px;
+    font-size: 16px;
+    @extend .rounded
+  }
+  [type=email]{
+    border: 1px solid grey;
+    padding: 0px 4px;
+  }
+  [type=submit] {
+    @extend .button
+  }
+}
