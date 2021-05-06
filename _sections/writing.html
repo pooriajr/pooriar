@@ -1,13 +1,16 @@
 ---
-heading: Writing
-subtitle: Hopefully, useful or entertaining stuff
+heading: Recent Writing
+subtitle: Hopefully useful or entertaining 
 ---
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
+{% for post in site.posts limit:3 %}
+<div>
+  <a href="{{ post.url }}">
+    <h3>{{ post.title }}</h3>
+  </a>
+  {{ post.excerpt }}
+  <small>Published {{ post.date | timeago }}</small>
+</div>
+{% endfor %}
 
+[See all the posts]({% link blog.html %})
