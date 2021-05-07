@@ -1,0 +1,11 @@
+name: Daily Netlify Build
+
+on:
+  shedule: 
+    - cron: "0 0 * * *"
+
+jobs:
+  netlify-build:
+    runs-on: ubuntu-latest
+    steps:
+        run: curl -X POST -d {} https://api.netlify.com/build_hooks/60959c4992791511b1620108
