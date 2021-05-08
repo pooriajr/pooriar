@@ -23,10 +23,26 @@ h1,h2,h3,h4,h5,h6,p {
   margin: 0;
 }
 
-pre {
-  padding: 15px;
+img {
+  max-width: 100%;
+}
+
+.highlight {
+  margin-left: 0;
+  margin-right: 0;
   color: #f8f8f2;
+}
+
+.highlight > pre {
+  padding: 15px;
+  overflow: scroll;
   @extend .rounded;
+}
+
+.language-plaintext .highlighter-rouge {
+  padding: 2px 5px;
+  color: #f8f8f2;
+  background-color: #272822;
 }
 
 .flow > * + * {
