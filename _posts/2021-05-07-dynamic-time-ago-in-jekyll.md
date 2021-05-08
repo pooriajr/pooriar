@@ -67,10 +67,16 @@ jobs:
 A few points:
 1. `cron: "0 0 * * *"` is a scheduler that represents once a day at midnight, in the UTC timezone.
 
-2. The `name:` on line 1 and `netlify-build:` on line 8 are the only parts where you can pick your own name.
+2. The `Daily Netlify Build` on line 1 and `netlify-build:` on line 8 are just names I chose, you can change them to whatever you want.
 
-3. The `curl` command sends a POST request to the build hook URL, which triggers the build. 
+3. The `curl` command sends an HTTP POST request to the build hook URL, which triggers the build. 
 
-## Done!
+Stage the new file, commit, and push to Github. You should see your new action on your repo's Github page now.
 
-Stage the new file, commit, and push to Github. You're done!
+![](/assets/images/posts/github-actions.png)
+
+## Sit back, relax
+
+That's all! Now you can wait for 00:00 UTC time and watch your site get automatically rebuilt with proper "Time Ago" labels. 
+
+Thanks for reading!
