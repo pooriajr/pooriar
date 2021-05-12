@@ -4,7 +4,7 @@ subtitle: Fragments of the past; evidence of life and love.
 ---
 
 {% for moment in site.moments limit:3 %}
-<div>
+<div class="moment">
 {{ moment.content }}
 </div>
 {% endfor %}
