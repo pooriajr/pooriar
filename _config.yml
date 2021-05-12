@@ -1,4 +1,5 @@
 collections: 
+  moments:
   sections:
     order:
       - writing.html
@@ -7,6 +8,7 @@ collections:
       - languages.md
       - travel.md
       - music.md
+      - moments.md
       - people.md
       - books.md
 plugins:
@@ -14,6 +16,9 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-timeago
+
+kramdown:
+  hard_wrap: true
 
 defaults:
   -

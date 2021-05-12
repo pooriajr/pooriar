@@ -1,0 +1,14 @@
+---
+title: Moments
+---
+
+<a href="{% link index.html %}">Home</a>
+
+<h1>Moments</h1>
+<small>Just so you know, I write these moments purely for myself. They're vague and flowery because I don't need them to be understood by everyone. But if you like them, that's cool too :)</small>
+
+{% for moment in site.moments %}
+<div class="moment">
+  {{ moment.content }}
+</div>
+{% endfor %}
