@@ -10,8 +10,9 @@ title: Moments
 <small>Sorry if it's selfish</small><br>
 <small>But this isn't really for you</small><br>
 
-{% for moment in site.moments %}
-<div class="moment">
-  {{ moment.content }}
-</div>
+{% assign shuffled_moments = site.moments | shuffle %}
+{% for moment in shuffled_moments %}
+  <div class="moment">
+    {{ moment.content }}
+  </div>
 {% endfor %}
