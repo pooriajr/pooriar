@@ -4,11 +4,7 @@ title: Unexpected benefits of a vegan diet
 date: 2021-05-14 19:52 -0500
 ---
 
-Let me just get this out of the way: if you're one of those people whose heart rate doubles at the mere mention of "vegan", hear me out. I'm not really "a Vegan" anymore than someone who spent a week on a boat is "a Sailor". 
-
-I've only been on an exclusively vegan diet for a few months here, a few months there. Not even a year of my life in total. And steak is my favorite food! How's that for an olive branch.
-
-Ok, if you're done huffing, please put down the steak knife and let me tell you some interesting benefits I noticed when I tried out veganism.
+Let me just get this out of the way: if you're one of those people whose heart rate doubles at the mere mention of "vegan", hear me out. I'm not really "a Vegan" anymore than someone who spent a week on a boat is "a Sailor". So maybe I'm the perfect peson to tell you about the benefits.
 
 ## Compulsive behavior melted away
 
