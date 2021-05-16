@@ -4,7 +4,7 @@ title: Unexpected benefits of a vegan diet
 date: 2021-05-14 19:52 -0500
 ---
 
-Let me just get this out of the way: if you're one of those people whose heart rate doubles at the mere mention of "vegan", hear me out. I'm not really "a Vegan" anymore than someone who spent a week on a boat is "a Sailor". So maybe I'm the perfect peson to tell you about the benefits.
+First off, a disclaimer: I'm not really "a Vegan" anymore than someone who spent a week on a boat is "a Sailor". That said, even in my short experiments with veganism, I noticed profound changes, so I want to share my observations.
 
 ## Compulsive behavior melted away
 
@@ -29,4 +29,24 @@ It's because a lot of vegan restaurants are like underdogs:
 
 All this mean that eating at these restaurants feels less like a cold transaction that needs to be optimized, and more like an act of generosity from both parties.
 
-This easily comforts the anxious mind. It's okay that I pay a bit more. I'm supporting good people by paying a bit more, and they're supporting my health by continuing to run their underdog business.
+This relaxes my anxious mind. "It's okay that I pay a bit more. I'm supporting good people by paying a bit more, and they're supporting my health by continuing to run their underdog business."
+
+## My mind adjusted very quickly
+
+You'd expect that a lifetime of delighting in animal products would make it hard to cope with their absence. It's not just about taste - eating good steak or good sushi is an *emotional* experience for me. 
+
+Indeed it was hard at first. Seeing someone eating a fresh pepperoni pizza made me feel like I was missing out. I felt the craving, and had to reject it.
+
+But after a few weeks, those cravings were so weak I could barely notice them.
+
+I was still aware that I would enjoy the taste of that food, but there was no pain in it, no feeling of missing out.
+
+Instead I started craving and appreciating good vegan food, which I would get from restaurants.
+
+And once I decided to stop eating Vegan, my mind quickly reverted to its pizza loving ways.
+
+## Conclusion
+
+I had ideas of what to expect going into veganism, and a lot of that turned out to be true. But the most important outcomes were total surprises, like the disappearance of compulsive behaviors.
+
+For me this shows that there is no replacement for actually doing something yourself. You can read about it and think on other people's experiences, but you shouldn't be confident in your conclusions until you see for yourself.
