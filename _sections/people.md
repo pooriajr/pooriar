@@ -1,15 +1,15 @@
 ---
-heading: People to blame 😉
-subtitle: How can I talk about myself without mentioning a few of the people who influenced me most?
+heading: People
+subtitle: No man is an island.
 ---
 
-My mother, my ultimate supporter. Words fail to describe how much you have done for me.
+My mother, my ultimate supporter. I could never thank you enough.
 
-My father, your patience and love are sturdy like mountains.
+My father, your patience and love have never faltered.
 
-Aaron, who opened my mind (and made me laugh more than anyone).
+Aaron, who opened my mind and made me laugh like never before (or since).
 
-Brian, who kept teaching despite me being the worst student.
+Brian, who never stops teaching this difficult student.
 
-And one more... you know who you are.
+And one more, you know who you are.
 

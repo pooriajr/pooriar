@@ -1,6 +1,6 @@
 ---
 heading: A Random Moment
-subtitle: Fragments of the past; evidence of life and love.
+subtitle: Fragments of the past
 ---
 
 {% assign moment = site.moments | sample %}
@@ -8,4 +8,4 @@ subtitle: Fragments of the past; evidence of life and love.
 {{ moment.content }}
 </div>
 
-[See all Moments]({% link moments.html %})
+[More Moments >]({% link moments.html %})
