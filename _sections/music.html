@@ -1,0 +1,22 @@
+---
+heading: Music
+subtitle: Judge my taste.
+---
+
+Korean indie & pop for language learning / guilty pleasure.
+
+Upbeat electronic to make me code better, obviously.
+
+Moody stuff to make me feel.
+
+<div class="image-grid">
+  {% for song in site.data.music %}
+  <div class="thumbnail">
+    <div class="resp-container">
+      <iframe class="resp-iframe" src="https://www.youtube-nocookie.com/embed/{{song.code}}?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+    </div>
+    <p>{{song.name}}</p>
+    <small>{{song.artist}}</small>
+  </div>
+  {% endfor %}
+</div>
