@@ -72,8 +72,6 @@ code.language-plaintext.highlighter-rouge {
 
 section {
   @extend .wrapper;
-  @extend .rounded;
-  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, .15);
 }
 
 footer {
@@ -99,7 +97,7 @@ footer {
   }
 }
 
-.moment {
+.fragment {
   border-left: 3px solid #333;
   padding-left: 1rem;
   font-family: Georgia;

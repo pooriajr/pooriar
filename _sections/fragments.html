@@ -1,0 +1,11 @@
+---
+heading: A Random Fragment
+subtitle: Bits of the past
+---
+
+{% assign fragment = site.fragments | sample %}
+<div class="fragment">
+{{ fragment.content }}
+</div>
+
+[More Fragments >]({% link fragments.html %})

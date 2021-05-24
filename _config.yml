@@ -2,7 +2,7 @@ collections:
   art:
     output: true
     permalink: /:collection/:name
-  moments:
+  fragments:
   sections:
     order:
       - writing.html
@@ -12,9 +12,9 @@ collections:
       - art.md
       - travel.md
       - music.md
-      - moments.md
       - people.md
       - books.md
+      - fragments.md
 plugins:
   - jekyll-feed
   - jekyll-sitemap

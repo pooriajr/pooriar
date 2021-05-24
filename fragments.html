@@ -1,18 +1,18 @@
 ---
-title: Moments
+title: Fragments
 ---
 
 <a href="{% link index.html %}">< Home</a>
 
-<h1>Moments</h1>
+<h1>Fragments</h1>
 <small>If you don't get it</small><br>
 <small>Don't worry, it's not your fault</small><br>
 <small>Sorry if it's selfish</small><br>
 <small>But this isn't really for you</small><br>
 
-{% assign shuffled_moments = site.moments | shuffle %}
-{% for moment in shuffled_moments %}
-  <div class="moment">
-    {{ moment.content }}
+{% assign shuffled_fragments = site.fragments | shuffle %}
+{% for fragment in shuffled_fragments %}
+  <div class="fragment">
+    {{ fragment.content }}
   </div>
 {% endfor %}
