@@ -1,6 +1,6 @@
 ---
 ---
 We gather in the chalet
-On this momentous occasion
+For this momentous occasion
 And drink chocolate milk 
 From wine glasses
