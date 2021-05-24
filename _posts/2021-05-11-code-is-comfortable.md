@@ -4,7 +4,7 @@ title: Code is comfortable
 date: 2021-05-11 18:15 -0500
 ---
 
-Before I started coding, I was an illustrator and deisgner. My work was visual and artistic. Most of all, it was subjective.
+Before I started coding, I was an illustrator and designer. My work was visual and artistic. Most of all, it was subjective.
 
 I struggled with that part of the work. I had to convince not only clients, but myself, that my work was worth money. That part was way harder than doing the work itself, and I never got good at it.
 
