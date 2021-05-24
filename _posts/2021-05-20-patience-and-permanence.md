@@ -4,13 +4,13 @@ title: Patience and Permanence
 date: 2021-05-20 18:39 -0500
 ---
 
-"No matter how many times I've cut my hair, even if my hair looks good for a little while, I just end up with messy hair again! I'm not sure haircuts are going to help me."
+"No matter how many times I've cut my hair, even if it looks good for a while, I end up with messy hair again! Maybe haircuts aren't going to help me."
 
 Sounds ridiculous, right? How about these:
 
-> "No matter how many times I've meditated, even if my mental state improves for a little while, I just end up anxious again! I'm not sure meditation is going to help me."
+> "No matter how many times I've meditated, even if my mental state improves for a little while, I just end up anxious again! Maybe meditation isn't going to help me."
 
-> "No matter how many times I've exercised, even if I am stronger and healthier for a little while, I just end up losing my progress. I'm not sure exercise is going to help me."
+> "No matter how many times I've exercised, even if I am stronger and healthier for a little while, I just end up losing my progress. Maybe exercise isn't going to help me."
 
 Still sounds ridiculous? They use the same logic, the key difference is expectations.
 
