@@ -2,7 +2,7 @@
 title: Vim Logo
 filename: vim.glb
 poster: vim-poster.png
-bg: '#ddd'
+bg: '#f0f0f0'
 fg: black
 ---
 
