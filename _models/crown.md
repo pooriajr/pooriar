@@ -1,8 +1,8 @@
 ---
-title: Vim Logo
-filename: vim.glb
-poster: vim-poster.png
-bg: '#e6f2e7'
+title: Fan Favorite Logo
+filename: fan-favorite.glb
+poster: fan-favorite-poster.png
+bg: '#edf2ff'
 fg: black
 ---
 
