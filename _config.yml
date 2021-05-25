@@ -2,6 +2,9 @@ collections:
   art:
     output: true
     permalink: /:collection/:name
+  models:
+    output: true
+    permalink: /:collection/:name
   fragments:
   sections:
     order:
@@ -10,6 +13,7 @@ collections:
       - tech.md
       - languages.md
       - art.md
+      - models.html
       - travel.md
       - music.html
       - people.md
@@ -36,5 +40,10 @@ defaults:
       type: "art" 
     values:
       layout: "art"
-
+  -
+    scope:
+      path: ""
+      type: "models" 
+    values:
+      layout: "model"
 permalink: /:slug

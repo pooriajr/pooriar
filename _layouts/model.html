@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<a href="{% link index.html %}">< Home</a>
+
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+<div class="resp-container">
+<model-viewer
+    class="resp-iframe"
+    src="/assets/models/{{page.filename}}"
+    poster="/assets/models/{{page.poster}}"
+    disable-zoom
+    camera-controls
+    auto-rotate-delay='0'
+    interaction-prompt-threshold="1000"
+    auto-rotate >
+</model-viewer>
+</div>
+
+  <h1>{{page.title}}</h1>
+
+  <style>
+body{
+  background-color: {{ page.bg }};
+  color: {{ page.fg }};
+}
+  </style>
+
+  {{content}}
