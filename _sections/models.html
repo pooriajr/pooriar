@@ -6,7 +6,7 @@ subtitle: Give 'em a spin.
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
 <div class="image-grid">
-    {% assign models = site.models | sample:3 %}
+    {% assign models = site.models | sample:4 %}
     {% for model in models %}
     <a href="{{model.url}}">
         <div class="thumbnail">

@@ -106,10 +106,10 @@ footer {
 .image-grid{
   .thumbnail {
     @extend .rounded;
-    width: calc(100%/3 - 3px);
+    width: calc(100%/4 - 4px);
     display: inline-block;
     text-align: center;
-    @media(max-width: 480px){
+    @media(max-width: 600px){
       width: 49%;
     }
     div {
