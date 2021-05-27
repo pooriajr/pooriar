@@ -91,6 +91,7 @@ footer {
   [type=email]{
     border: 1px solid grey;
     padding: 0px 4px;
+    margin: 10px 0;
   }
   [type=submit] {
     @extend .button;
