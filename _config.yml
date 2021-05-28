@@ -18,7 +18,8 @@ collections:
       - music.html
       - people.md
       - books.md
-      - fragments.md
+      - fragments.html
+      - around.md
 plugins:
   - jekyll-feed
   - jekyll-sitemap
