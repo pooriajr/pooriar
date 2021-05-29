@@ -4,9 +4,7 @@ title: "Behind the scenes: 3D Vim animation"
 date: 2021-05-28 20:26 -0500
 ---
 
-I decided to learn 3D animation with the Vim logo because it's got this pseudo-3D effect. 
-
-Actually, that's a lie, I'm just obsessed with vim. 
+I decided to learn 3D animation with the Vim logo because it's got this pseudo-3D effect. Actually, that's a lie, I'm just obsessed with vim. 
 
 ![vim logo](/assets/images/posts/vim-logo.png)
 
