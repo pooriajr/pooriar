@@ -1,7 +1,7 @@
 ---
 title: Your attention, please
 image_path: your-attention-please.jpg
-bg: red
+bg: black
 fg: white
 
 ---
