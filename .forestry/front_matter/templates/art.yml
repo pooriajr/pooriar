@@ -1,0 +1,16 @@
+---
+label: Art
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: file
+  name: image_path
+  label: image_path
+- type: text
+  name: bg
+  label: bg
+- type: text
+  name: fg
+  label: fg
