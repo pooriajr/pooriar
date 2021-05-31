@@ -14,9 +14,6 @@ GEM
     http_parser.rb (0.6.0)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
-    image_processing (1.12.1)
-      mini_magick (>= 4.9.5, < 5)
-      ruby-vips (>= 2.0.17, < 3)
     jekyll (4.2.0)
       addressable (~> 2.4)
       colorator (~> 1.0)
@@ -56,7 +53,6 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
     mini_i18n (0.8.0)
-    mini_magick (4.11.0)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (4.0.6)
@@ -65,8 +61,6 @@ GEM
       ffi (~> 1.0)
     rexml (3.2.5)
     rouge (3.26.0)
-    ruby-vips (2.1.2)
-      ffi (~> 1.12)
     safe_yaml (1.0.5)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -79,7 +73,6 @@ PLATFORMS
   x86_64-darwin-18
 
 DEPENDENCIES
-  image_processing (~> 1.0)
   jekyll
   jekyll-compose
   jekyll-feed

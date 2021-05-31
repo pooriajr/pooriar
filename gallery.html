@@ -1,0 +1,14 @@
+---
+title: Gallery
+---
+
+<h1>Gallery</h1>
+
+<div class="image-grid">
+{% assign shuffled_art = site.art | shuffle %}
+{% for art in shuffled_art %}
+<a href="{{ art.url }}">
+  <img class="thumbnail" src="{{site.art_thumbnails_dir}}{{art.file}}" alt="">
+</a>
+{% endfor %}
+</div>

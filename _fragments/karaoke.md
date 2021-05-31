@@ -1,7 +1,6 @@
 ---
 ---
-It's so easy to forget the world
-In this little room with you
-Singing my heart out
-Vocal chords fried
-A rare ecstasy and confidence
+It's easy to forget there's anything else
+Outside of this little room with you
+Vocal chords fail, my heart doesn't
+Rare ecstasy, sheltered confidence

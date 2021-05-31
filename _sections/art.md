@@ -7,10 +7,10 @@ subtitle: Necessary or Not?
 {% assign arts = site.art | sample:4 %}
 {% for art in arts %}
 <a href="{{ art.url }}">
-  <img class="thumbnail" src="assets/images/art/thumbnails/{{art.image_path}}" alt="">
+  <img class="thumbnail" src="assets//art/thumbnails/{{art.file}}" alt="">
 </a>
 {% endfor %}
 </div>
 
 
-[More Art >]({% link art.html %})
+[More Art >]({% link gallery.html %})

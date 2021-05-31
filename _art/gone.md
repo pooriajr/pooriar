@@ -1,6 +1,6 @@
 ---
 title: Gone
-image_path: gone.jpg
+file: gone.jpg
 bg: black
 fg: white
 ---

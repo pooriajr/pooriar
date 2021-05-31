@@ -6,7 +6,7 @@ slug: dynamic-time-ago-in-jekyll
 ---
 My site has a Recent Writing section which shows my latest blog posts. Rather than displaying "Published May 5, 2020", I want to show "Published 2 days ago":
 
-![](/assets/images/posts/dynamic-dates-1.png)
+![]({{site.img_dir}}dynamic-dates-1.png)
 
 There's a [Jekyll plugin](https://github.com/markets/jekyll-timeago) for this, with a catch. It only sets the times when Jekyll builds the site, and can't update them until the next rebuild. This is the nature of a static site generator.
 
@@ -32,7 +32,7 @@ Create a new build hook. Mine is called "REBUILD_CRON" because we're going to se
 
 Netlify helpfully provides a `curl` command once you've created your build hook, hit the little caret in the corner to see it.
 
-![](/assets/images/posts/build-hooks.png)
+![]({{site.img_dir}}build-hooks.png)
 
 ## Scheduling the Github Action
 
@@ -73,7 +73,7 @@ A few points:
 
 Stage the new file, commit, and push to Github. You should see your new action on your repo's Github page now.
 
-![](/assets/images/posts/github-actions.png)
+![]({{site.img_dir}}github-actions.png)
 
 ## Sit back, relax
 

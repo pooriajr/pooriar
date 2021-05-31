@@ -1,7 +1,7 @@
 collections: 
   art:
     output: true
-    permalink: /:collection/:name
+    permalink: /gallery/:name
   models:
     output: true
     permalink: /:collection/:name
@@ -49,3 +49,12 @@ defaults:
     values:
       layout: "model"
 permalink: /:slug
+
+# Sitewide variables
+art_dir: /assets/art/
+art_thumbnails_dir: /assets/art/thumbnails/
+img_dir: /assets/img/
+
+github: https://github.com/pooriar
+twitter: https://twitter.com/pooria_r
+email: mailto:pooria@hey.com

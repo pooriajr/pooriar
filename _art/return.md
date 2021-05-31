@@ -1,6 +1,6 @@
 ---
 title: Return
-image_path: return.jpg
+file: return.jpg
 bg: white
 fg: black
 ---
