@@ -9,7 +9,7 @@ subtitle: Hopefully useful or entertaining.
     <h3>{{ post.title }}</h3>
   </a>
   {{ post.excerpt }}
-  <small>Published {{ post.date | timeago }}</small>
+  <small>{{ post.date | timeago }}</small>
 </div>
 {% endfor %}
 
