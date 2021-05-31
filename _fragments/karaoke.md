@@ -1,6 +1,6 @@
 ---
 ---
-It's easy to forget there's anything else
-Outside of this little room with you
-Vocal chords fail, my heart doesn't
+Is there really anything else
+Outside this little room
+Vocal chords fail, our hearts don't
 Rare ecstasy, sheltered confidence
