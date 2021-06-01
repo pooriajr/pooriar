@@ -2,8 +2,11 @@
 layout: default
 ---
 
+{% if page.video %}
+{% include video.html filename = page.video autoplay = true %}
+{% else %}
 <img src="{{site.art_dir}}{{page.file}}" alt="">
-
+{% endif %}
 
 <h1>{{page.title}}</h1>
 

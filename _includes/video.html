@@ -1,5 +1,5 @@
-<video controls>
-  <source src="/assets/video/{{include.filename}}.mp4"
-            type="video/mp4">
-    Sorry, your browser doesn't support embedded videos.
+<video controls {% if include.autoplay %}autoplay muted{% endif %}>
+       <source src="/assets/video/{{include.filename}}.mp4"
+               type="video/mp4">
+       Sorry, your browser doesn't support embedded videos.
 </video>
