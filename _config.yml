@@ -5,6 +5,8 @@ collections:
   models:
     output: true
     permalink: /:collection/:name
+  trophies:
+    output: true
   fragments:
   sections:
     order:

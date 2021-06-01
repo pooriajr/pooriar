@@ -1,0 +1,17 @@
+---
+---
+
+<p>You know how people have trophy rooms so when they're feeling worthless they can look around and remind themselves that maybe they're not such a failure after all?</p>
+
+<p>This is my trophy room. Replete with cheesy gold gradients.</p>
+
+<p>Also, who are you and what are you doing here!? This room is secret!</p>
+
+<div class="flow">
+  {% assign trophies = site.collections | where: "label", "trophies" | first %}
+  {% for trophy in trophies.files reversed %}
+    <div class="trophy">
+      <img src="/trophies/{{trophy.name}}" alt="">
+    </div>
+  {% endfor %}
+</div>
