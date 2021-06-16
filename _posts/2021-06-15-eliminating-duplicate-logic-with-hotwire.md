@@ -41,17 +41,17 @@ And by state I mean whether the Votable is either "already voted" or "not voted"
 
 As you can see, my JavaScript is very concerned with state. That's because now I can't rely purely on my server-rendered template pulling state from the database. I have to keep track of state on the front end too. That's not ideal, because it invites bugs from the front-end and back-end falling out of sync.
 
-Another problem is that now I have duplicate logic. Logic from my server-rendered template must be mimicked by my front-end JS. And it's just translating Ruby to JavaScript. One is server-rendered ERB, the other is imperative DOM manipulation. 2 totally distinct approaches that have to be kept in sync to produce the same HTML. Not ideal.
+Another problem is that now I have duplicate logic. Logic from my server-rendered template must be mimicked by my front-end JS. And it's not just translating Ruby to JavaScript. One is server-rendered ERB, the other is imperative DOM manipulation. 2 totally distinct approaches that have to be kept in sync to produce the same HTML. Not ideal.
 
 Surely these are common and solvable problems for developers, but it would be great to avoid them if possible. 
 
 ## A Hotwire Way
 
-Hotwire has a feature called Turbo Frames. Turbo Frames are similar to the method from the Easy Way I mentioned earlier, where you just do a full page reload with your server rendered template. But Turbo Frames don't reload the *whole* page, rather just the specific parts that need it, leaving the rest alone.
+Hotwire has a feature called Turbo Frames. Turbo Frames are similar to the method from the Easy Way I mentioned earlier, where you do a full page reload with your server rendered template. But Turbo Frames don't reload the *whole* page, rather just the specific parts that need it, leaving the rest alone.
 
 So by wrapping each Votable in its own Turbo Frame, it doesn't matter whether a page has 5 Votables or 50 Votables, clicking on a Votable only updates that one Votable and nothing else, keeping page updates small and fast.
 
-I can remove all that DOM manipulation Javascript. Turbo Frames just uses the same server-rendered templates that I already have. Now all my view logic is in one place and always guaranteed to be in sync with my database. The end result feels fast and responsive like a front-end framework. Best of all, getting all these benefits was a breeze thanks to the effort that creators of Hotwire have put into making it easy to use.
+I can remove all that DOM manipulation Javascript. Turbo Frames uses the same server-rendered templates that I already have. Now all my view logic is in one place and always guaranteed to be in sync with my database. The end result feels fast and responsive like a front-end framework. Best of all, getting all these benefits was a breeze thanks to the effort that creators of Hotwire have put into making it easy to use.
 
 ## Going forward
 
