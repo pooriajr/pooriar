@@ -4,7 +4,7 @@ title: Basecamp
 
 Hey Basecamp, 
 
-I'm Pooria Rashidi, a web developer from Tucson Arizona. I'm *thrilled* to get this rare shot at joining the Basecamp team. So cutting to the chase, I want to explain why I think I'd fit right in at Basecamp.
+I'm Pooria Rashidi, a web developer from Tucson, Arizona. I'm *thrilled* to get this rare shot at joining the Basecamp team. So cutting to the chase, I want to explain why I think I'd fit right in at Basecamp.
 
 ## Manager of One
 
@@ -38,3 +38,10 @@ Thank you for your hard work! Fingers crossed that I hear back soon.
 
 Pooria Rashidi
 pooria@hey.com
+
+PS - here's a few recent works I'm proud of:
+- I made a [Rails app](https://oneweektomake.com) to let the internet vote on what I should build next.
+- I used Rails/Hotwire to rapidly build [the winning app idea](https://fanfavorite.io) in one week and [launched on Product Hunt](https://www.producthunt.com/posts/fan-favorite).
+- My article on repurposing Reddit's ranking algorithm got [published as the top story](https://hackernoon.com/from-reddits-hot-ranking-algorithm-to-my-satisfying-blend-or-top-ranked-and-new-by2h35tm) at Hackernoon. 
+- I [documented my process](https://pooriar.com/behind-the-scenes-vim-animation) going from totally clueless to making a 3D animation of the vim logo.
+- I've started a [tiny personal site](pooriar.com) where I post my [writing](https://pooriar.com/posts), side projects, art, poetry, etc.
