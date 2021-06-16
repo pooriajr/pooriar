@@ -17,7 +17,7 @@ In this article we only care about 3 dynamic parts of a Votable:
 2. The vote count changes based on the number of votes, including yours.
 3. The HTTP request that gets sent when you click the Votable can either be a POST request to create a vote, or a DELETE request to delete a vote. The URL of the request also varies.
 
-I have a week to build the app, so I'm sticking to convention for speed and simplicity, using server-rendered templates. The means the logic to render the  dynamic parts of a Votable are in the templates. On the initial page load, everything looks and works exactly as it should.
+I have a week to build the app, so I'm sticking to Rails convention for speed and simplicity, using server-rendered templates. The template contains the logic to render the  dynamic parts of a Votable. On the initial page load, everything looks and works exactly as it should.
 
 But what happens when someone clicks on a Votable? That triggers a change in the back-end (creating or destroying a record in the database), so how do we update all those dynamic parts on the front-end to reflect that change?
 
@@ -31,7 +31,7 @@ I need to update the DOM without reloading. Time for a little JS.
 
 ## A Standard Way
 
-An standard approach with JavaScript is to listen for click events on Votables, and then update the DOM like so:
+A standard approach with JavaScript is to listen for click events on Votables, and then update the DOM like so:
 
 1. Depending on the state of the Votable, set the appropriate heart icon
 2. Depending on the state of the Votable, increment or decrement the vote count by 1
@@ -41,7 +41,7 @@ As you can see, my JavaScript is very concerned with state. That's because now I
 
 Now I have duplicate logic. Logic from my server-rendered template must be mimicked by my front-end JS. And it's not just translating Ruby to JavaScript. One is an ERB template, the other is imperative DOM manipulation. 2 very different approaches that must be kept in sync to render the same HTML. 
 
-There's even more duplication. What if the request fails on the back-end? I need front-end logic to handle that, but I already wrote that on the back-end. Ah well, duplicate it. I also might need to handle the "in-between" state where I'm waiting to hear back from the server on whether the operation succeeded. Browsers already have that, so now I'm even duplicating browser logic.
+There's even more duplication. What if the request fails on the back-end? I need front-end logic to handle that, even though I already have it on the back-end. Ah well, duplicate it. I also might need to handle the "in-between" state where I'm waiting to hear back from the server on whether the operation succeeded. Browsers already have that, so now I'm even duplicating browser logic.
 
 I can either suck it up and write/maintain this duplicate logic, or eliminate duplication by moving *all* the view logic out of templates and into the front-end with something like a React component. But this merely trades one set of problems for another and adds complexity. Plus I'm short on time, and these changes aren't trivial. Is there a better way?
 
@@ -51,9 +51,9 @@ Hotwire has a feature called Turbo Frames. Turbo Frames are similar to the metho
 
 So by wrapping each Votable in its own Turbo Frame, it doesn't matter whether a page has 5 Votables or 50 Votables, clicking on a Votable only updates that one Votable and nothing else, keeping page updates small and fast.
 
-I can remove all that DOM manipulation JavaScript. Turbo Frames uses the same server-rendered templates that I already have. Now all my view logic is in one place and always guaranteed to be in sync with my database. The end result feels fast and responsive like a front-end framework. 
+I can remove all that DOM manipulation JavaScript. Turbo Frames use the same server-rendered templates that I already have. Now all my view logic is in one place and guaranteed to stay in sync with my database. For users, it feels fast and responsive, like a SPA.
 
-Best of all, getting all these benefits is a breeze. Ease of use is clearly a top priority for Hotwire. You just add a few wrappers with ID's to your templates and the library handles the rest. 
+Best of all, getting these benefits is a breeze. Ease of use is clearly a top priority for Hotwire. You just add a few wrappers with ID's to your templates and the library handles the rest. 
 
 ![](/assets/img/i-love-magic.png)
 
@@ -61,4 +61,4 @@ Best of all, getting all these benefits is a breeze. Ease of use is clearly a to
 
 This was a small example, but there's more to gain from using Hotwire. For example, Turbo Streams, another part of Hotwire, would let me update the vote counts on everyone's screen in real time as *other people* cast votes. 
 
-And Hotwire is still in beta. I'm excited to see how it opens up a new way to build painless modern front-ends while retaining the simplicity of server-rendered templates. Check it out at [hotwire.dev](https://hotwire.dev)
+Hotwire is still in beta. I'm excited to see how it opens up a new way to build painless modern front-ends while retaining the simplicity of server-rendered templates. Check it out at [hotwire.dev](https://hotwire.dev)
