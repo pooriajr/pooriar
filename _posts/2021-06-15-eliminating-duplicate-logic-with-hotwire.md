@@ -53,7 +53,7 @@ So by wrapping each Votable in its own Turbo Frame, it doesn't matter whether a 
 
 I can remove all that DOM manipulation JavaScript. Turbo Frames uses the same server-rendered templates that I already have. Now all my view logic is in one place and always guaranteed to be in sync with my database. The end result feels fast and responsive like a front-end framework. 
 
-Best of all, getting all these benefits is a breeze thanks to the effort that creators of Hotwire have put into making it easy to use. You just add a few wrappers with ID's to your templates and the library handles the rest. 
+Best of all, getting all these benefits is a breeze. Ease of use is clearly a top priority for Hotwire. You just add a few wrappers with ID's to your templates and the library handles the rest. 
 
 ![](/assets/img/i-love-magic.png)
 
