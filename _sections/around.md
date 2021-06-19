@@ -10,5 +10,3 @@ I've got a [twitter]({{site.github}}) where I post little updates if you're into
 My [github]({{site.github}}) has some public repos.
 
 I don't use facebook or instagram much anymore.
-
-Oh LinkedIn? Sorry little buddy, I forgot you. It's just... I'd rather not...
