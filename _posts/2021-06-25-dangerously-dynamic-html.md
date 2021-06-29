@@ -3,15 +3,14 @@ layout: post
 title: Dangerously dynamic HTML
 date: 2021-06-25 20:47 -0500
 ---
-This article tries to be beginner-friendly. It starts with an explanation of static vs. dynamic, then meanders through safe examples before getting to *the danger*.
 
-If you want to skip straight to danger, [right this way.🤘](#danger)
+HTML isn't designed for dynamic content, and it shows. Templating languages and front end libraries pick up the slack. But what if you want dynamic HTML without dependencies?
 
-## What is dynamic, *really*?
+## Why be dynamic at all?
 
-Let's say you're making an app to keep track of personal relationships (\*cough\* [undrift.netlify.app](undrift.netlify.app) \*cough\*). You probably need to create HTML elements that correspond to various people. 
+Let's say you're making an app to keep track of personal relationships. You probably need to create HTML elements that correspond to various people. 
 
-Let's say I want to add 3 people into the app: My friend Alice, my coworker Bob, and my Cat (yeah that's not a person but I was going for an A,B,C thing).
+I want to add 3 people into the app: My friend Alice, my coworker Bob, and my Cat (yeah that's not a person but I was going for an A,B,C thing).
 
 I'm the programmer, goddamnit, so I can just write them into the HTML like so:
 
@@ -26,19 +25,11 @@ But if I want to add a person, or change a name, or remove one, I have to go edi
 
 This is *static*, and it's the opposite of dynamic.
 
-A dynamic version of this would allow anyone to add their own list of people, and edit it without me, the programmer, having to touch code.
-
-As you can imagine, dynamism is important in the world of websites, and anything fancier than a digital brochure needs it.
-
-# Ways to fill the gap
-
-HTML doesn't offer a great way to handle dynamic elements. The language was designed for documents, which are generally static. Like literal digital brochures. And now here we come wanting to write a fancy dynamic application with it? We crazy?
+A dynamic version of this would allow anyone to add their own list of people, and edit it without me, the programmer, having to touch code. Dynamism is crucial in the world of websites, and anything fancier than a digital brochure needs it.
 
 ## JS to the rescue?
 
-It's an awkward rescue, like having a donkey to help you move into a new house. You would have preferred a strong friend and a moving truck. But a donkey *can* help, in its own unique way. 
-
-Here's a basic "by the book" way of creating dynamic elements with pure JavaScript. 
+Here's a basic "by the book" way of creating dynamic elements with pure JavaScript. It's awkward, but it works.
 
 ```js
 var people = ['Alice', 'Bob', 'Cat']
@@ -55,79 +46,29 @@ Before executing the JavaScript, our HTML features a lonely `<ul>`, mouth open t
 ```html
 <ul id="people"></ul>
 ```
-
 This implementation is comically simplified. Don't think you could really stop here. We are just looking at dynamic *creation* and completely leaving out edits and deletion. In real world applications with complex logic, we're gonna write a lot more code, and if we're not careful, soon we'll be knee deep in spaghetti! Bon appétit! 🍝
 
 ## Templating Languages
 
-Developers created templating languages to make up for HTML's shortcomings. These are alternative languages that are nice for humans to write dynamic elements. But browsers can't read these alternative languages, only HTML, so they need a translator. We call that rendering - when a program sticks your data into your template and spits out HTML.
+If your app doesn't have a lot of dynamic elements, the example above might be a good route. It adds 0 dependencies to your code. You can inline it in your HTML and serve it as-is without a hint of build tooling or additional backend dependencies.
 
-### Pug
-Here's Pug, a popular templating language. Isn't that nice and short?
+If your app is highly dynamic, then you should get help from an appropriate templating language or library. The added dependency will be well worth it.
 
-```
-- var people = ['Alice', 'Bob', 'Cat']
+But what if you want the power of a templating language without the added dependency?
 
-ul#people
-  each person in people
-    li.person= person
-```
+## Don't try this at home
 
-### ERB
+The method I'm going to share is simple and powerful. It lets you generate dynamic HTML content with no dependencies. It uses JavaScript, but unlike the example I showed earlier, it lets you keep your HTML as HTML, rather than turning it into a series of DOM methods and assignments. 
 
-ERB is one of my favorites. It adds the full power of Ruby into the HTML you already know.
+The downside is that this method is a security nightmare. It uses the `eval` function, which has a [whole section on MDN telling you to never use it](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#never_use_eval!)
 
-```erb
-<% people = ['Alice', 'Bob', 'Cat'] %>
+But if you're making an app which doesn't involve sensitive data, or which no one else uses, this is a fast and fun way to prototype dynamic HTML.
 
-<ul id="people">
-  <% for person in people %>
-    <li class="person"><%= person %></li>
-  <% endfor %>
-</ul>
-```
+## Eval, JavaScript's dirty secret
 
-### JSX
+It's funny that I didn't even know there was an `eval` function in JS until recently, and I've been writing it for years. While learning Ruby, `eval` was in every beginner tutorial. But in JavaScript no one talks about it.
 
-JSX is not so much an HTML templating language as it is a React templating language. It's more concerned with *interactive components* than *dynamic HTML*, but it's good for both.
-
-```jsx
-export default function App() {
-  var people = ["Alice", "Bob", "Cat"];
-
-  return (
-    <ul id="people">
-      {people.map(function (person) {
-        return <li>{person}</li>;
-      })}
-    </ul>
-  );
-}
-```
-
-### Everything has a cost
-
-Templating languages are loved by millions of developers, but they always have a cost. They add complexity. They add dependencies. Pick wisely, and the benefits far outweigh the costs. Pick poorly, and you may create new problems for yourself down the line, but still benefit compared to using raw HTML.
-
-So, when might you want to not use a templating language at all?
-
-<h2 id="danger">Let's get dangerous</h2>
-
-Let's say you're making an app for yourself, for fun.
-
-And you don't want to write imperative javascript like I showed in the pure javascript example. That was the donkey analogy one.
-
-And for whatever reason, you want to try making it with 0 external libraries.
-
-And security is **not a factor**.
-
-Then boy, do I have an idea for you.
-
-## Never use Eval()!
-
-You know it's going to be fun when the MDN page has a [whole section telling you not to use it](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#never_use_eval!).
-
-I didn't even know there was an `eval` function in JS, and I've been writing it for years. It's like finding a forbidden artifact.
+So how does it work?
 
 ```js
 var monster = null
@@ -136,11 +77,84 @@ eval('monster =' + '"franken' + 'stein"')
 console.log(monster) // 'frankenstein'
 ```
 
-Eww what is that? Eval simply takes any string you pass in and executes it like real javascript. It's simple but dangerously powerful, *especially* if you use it with user-generated data. And that's *exactly* how we'll use it. 😎
+Eval takes any string you pass in and executes it like real javascript. That's it? Why all the fuss? 
 
-## But really, be careful
+`eval` is a red carpet for malicious 3rd party code. Take this code:
 
-Here's the deal with `eval`. It's a red carpet for malicious 3rd party code. In my app, there aren't any untrusted 3rd parties. Interaction between users is impossible, so someone can't set their First Name to 'initiateSelfDestruct()' to blow up your phone when you visit their profile. They could blow up their own phone, but whatever, their call.
+```js
+users = [
+  {name: 'Alice', hobby: 'coding',  gender: 'female'},
+  {name: 'Bob',   hobby: 'writing', gender: 'male'},
+  {name: 'Cat',   hobby: 'scratching'}
+  ]
+
+function maleIntro(name, hobby) {
+  return `His name is ${name}. He likes ${hobby}.`
+}
+
+function femaleIntro(name, hobby) {
+  return `Her name is ${name}. She likes ${hobby}.`
+}
+
+function undefinedIntro(name, hobby) {
+  return `Their name is ${name}. They like ${hobby}.`
+}
+
+function logIntro(user) {
+    var introFunction = eval(`{$user.gender}Intro`)
+    var intro = eval(`${user.gender}Intro("${user.name}", "${user.hobby}")`)
+    console.log(intro)
+}
+
+users.forEach(logIntro)
+// Her name is Alice. She likes coding. 
+// His name is Bob. He likes writing. 
+// Their name is Cat. They like scratching.
+```
+
+Notice how there's not one `if` statement in that code, and yet we create 3 unique strings based on the `gender`, with a fallback for when it's undefined. Pretty neat right? But there's a vulnerability here. What if a malicious user signs up and inserts a chunk of valid javascript as their "name":
+
+```js
+users = [
+  {name: '"); while(true){window.alert()}; ("', hobby: 'haxx'
+  {name: 'Alice',                               hobby: 'coding',  gender: 'female'},
+  {name: 'Bob',                                 hobby: 'writing', gender: 'male'},
+  {name: 'Cat',                                 hobby: 'scratching'}
+  ]
+```
+
+That's an infinite loop, and now `eval` will run this code, locking up the page. 
+
+```js
+undefinedIntro(""); while(true){window.alert()}; ("", "haxx")
+```
+
+This is a simple example, but with total freedom to run any JavaScript they want, they can do much worse than lock up the page. 
+
+We can avoid this vulnerability by only ever using `eval` with strings that we know we can trust. So we could refactor the `logIntro` function like so:
+
+```js
+// vulnerable
+function logIntro(user) {
+    var intro = eval(`${user.gender}Intro("${user.name}", "${user.hobby}")`)
+    console.log(intro)
+}
+// safe ... for now
+function logIntro(user) {
+    var introFunction = eval(`$user.gender`Intro)
+    var intro = introFunction(user.name, user.hobby)
+    console.log(intro)
+}
+
+```
+
+It's  Instead we use `eval` programmatically to peice together the name of the appropriate function to call. It even has a neutral fallback for when `gender` is undefined. This is a type of metaprogramming that is popular in some other languages like Ruby. 
+
+But 
+
+
+
+If an application uses  In my app, there aren't any untrusted 3rd parties. Interaction between users is impossible, so someone can't set their First Name to 'initiateSelfDestruct()' to blow up your phone when you visit their profile. They could blow up their own phone, but whatever, their call.
 
 I don't run ads, so no shady code can slip in there. There are no browser extensions for it. If any of those things changed, I'd be better off removing `eval`.
 
