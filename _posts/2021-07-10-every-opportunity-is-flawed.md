@@ -4,7 +4,7 @@ title: Every opportunity is flawed
 date: 2021-07-10 13:31 -0500
 ---
 
-How often have you been drawn to an opportunity, only to let it go when you notice a flaw? In the moment it feels reasonable to not waste resources on a bad bet. But what if every opportunity is flawed?
+How often have you been drawn to an opportunity, only to let it go when you notice a flaw? It feels reasonable to not waste resources on a bad bet. But what if every opportunity is flawed?
 
 Most opportunities have obvious flaws. The rest have flaws too, you just may not see them yet. If this is true, do you want to be the type who's quick to let go of a flawed opportunity? Wouldn't that severely limit you? 
 
