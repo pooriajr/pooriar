@@ -6,7 +6,7 @@ set :repo_url, "git@github.com:pooriar/pooriar.git"
 
 task :pull_master do
   # Pull the latest code from the Git repository
-  on roles(:web) do
+  within_release_path do
     # execute 'git pull origin master'
     execute 'bundle exec jekyll build'
   end
