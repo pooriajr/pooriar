@@ -1,0 +1,157 @@
+# Logfile created on 2022-12-13 15:23:05 -0500 by logger.rb/v1.4.2
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-12-13 15:23:05 -0500 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-12-13 15:23:25 -0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-12-13 15:25:57 -0500 cap production git:check
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-12-13 15:29:46 -0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-12-13 15:37:55 -0500 cap production git:check
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-12-13 15:40:16 -0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-12-13 15:41:23 -0500 cap production doctor
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-12-13 15:48:59 -0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-12-13 15:51:00 -0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-12-13 15:51:13 -0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [96120f17] Running git pull as pooria@localhost
+ DEBUG [96120f17] Command: git pull
+ DEBUG [96120f17] 	Already up to date.
+  INFO [96120f17] Finished in 0.540 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-12-13 15:51:27 -0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [9923261b] Running git pull as pooria@localhost
+ DEBUG [9923261b] Command: git pull
+ DEBUG [9923261b] 	Already up to date.
+  INFO [9923261b] Finished in 0.471 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-12-13 15:52:41 -0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-12-13 15:52:47 -0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-12-13 15:54:42 -0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [3f64def0] Running /usr/bin/env mkdir -p /tmp as root@pooriar.com
+ DEBUG [3f64def0] Command: /usr/bin/env mkdir -p /tmp
+  INFO [4a550e2e] Running /usr/bin/env #<StringIO:0x000000015639bf00> /tmp/git-ssh-9090f6de6ff9c39eb767.sh as root@pooriar.com
+ DEBUG [4a550e2e] Command: /usr/bin/env #<StringIO:0x000000015639bf00> /tmp/git-ssh-9090f6de6ff9c39eb767.sh
+  INFO [ad8c3cc3] Running /usr/bin/env chmod 700 /tmp/git-ssh-9090f6de6ff9c39eb767.sh as root@pooriar.com
+ DEBUG [ad8c3cc3] Command: /usr/bin/env chmod 700 /tmp/git-ssh-9090f6de6ff9c39eb767.sh
+  INFO [4e0a70ba] Running /usr/bin/env git ls-remote git@github.com:pooriar/pooriar.git HEAD as root@pooriar.com
+ DEBUG [4e0a70ba] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-9090f6de6ff9c39eb767.sh" ; /usr/bin/env git ls-remote git@github.com:pooriar/pooriar.git HEAD )
+  INFO [f8f10917] Running /usr/bin/env mkdir -p /var/www/pooriar/shared /var/www/pooriar/releases as root@pooriar.com
+ DEBUG [f8f10917] Command: /usr/bin/env mkdir -p /var/www/pooriar/shared /var/www/pooriar/releases
+ DEBUG [1266670b] Running [ -f /var/www/pooriar/current/REVISION ] as root@pooriar.com
+ DEBUG [1266670b] Command: [ -f /var/www/pooriar/current/REVISION ]
+ DEBUG [031c4270] Running /usr/bin/env cat /var/www/pooriar/current/REVISION 2>/dev/null as root@pooriar.com
+ DEBUG [031c4270] Command: /usr/bin/env cat /var/www/pooriar/current/REVISION 2>/dev/null
+ DEBUG [b1ede2f3] Running [ -f /var/www/pooriar/repo/HEAD ] as root@pooriar.com
+ DEBUG [b1ede2f3] Command: [ -f /var/www/pooriar/repo/HEAD ]
+  INFO The repository mirror is at /var/www/pooriar/repo
+ DEBUG [0a1b806c] Running if test ! -d /var/www/pooriar/repo; then echo "Directory does not exist '/var/www/pooriar/repo'" 1>&2; false; fi as root@pooriar.com
+ DEBUG [0a1b806c] Command: if test ! -d /var/www/pooriar/repo; then echo "Directory does not exist '/var/www/pooriar/repo'" 1>&2; false; fi
+  INFO [b2e3a544] Running /usr/bin/env git remote set-url origin git@github.com:pooriar/pooriar.git as root@pooriar.com
+ DEBUG [b2e3a544] Command: cd /var/www/pooriar/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-9090f6de6ff9c39eb767.sh" ; /usr/bin/env git remote set-url origin git@github.com:pooriar/pooriar.git )
+  INFO [9f08f72f] Running /usr/bin/env git remote update --prune as root@pooriar.com
+ DEBUG [9f08f72f] Command: cd /var/www/pooriar/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-9090f6de6ff9c39eb767.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [8584100f] Running if test ! -d /var/www/pooriar/repo; then echo "Directory does not exist '/var/www/pooriar/repo'" 1>&2; false; fi as root@pooriar.com
+ DEBUG [8584100f] Command: if test ! -d /var/www/pooriar/repo; then echo "Directory does not exist '/var/www/pooriar/repo'" 1>&2; false; fi
+  INFO [83213681] Running /usr/bin/env mkdir -p /var/www/pooriar/releases/20221213205442 as root@pooriar.com
+ DEBUG [83213681] Command: cd /var/www/pooriar/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-9090f6de6ff9c39eb767.sh" ; /usr/bin/env mkdir -p /var/www/pooriar/releases/20221213205442 )
+  INFO [b4513d49] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/pooriar/releases/20221213205442 as root@pooriar.com
+ DEBUG [b4513d49] Command: cd /var/www/pooriar/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-9090f6de6ff9c39eb767.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/pooriar/releases/20221213205442 )
+ DEBUG [4474ed48] Running if test ! -d /var/www/pooriar/repo; then echo "Directory does not exist '/var/www/pooriar/repo'" 1>&2; false; fi as root@pooriar.com
+ DEBUG [4474ed48] Command: if test ! -d /var/www/pooriar/repo; then echo "Directory does not exist '/var/www/pooriar/repo'" 1>&2; false; fi
+ DEBUG [8c8f7392] Running /usr/bin/env git rev-list --max-count=1 master as root@pooriar.com
+ DEBUG [8c8f7392] Command: cd /var/www/pooriar/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-9090f6de6ff9c39eb767.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [76e969b3] Running if test ! -d /var/www/pooriar/releases/20221213205442; then echo "Directory does not exist '/var/www/pooriar/releases/20221213205442'" 1>&2; false; fi as root@pooriar.com
+ DEBUG [76e969b3] Command: if test ! -d /var/www/pooriar/releases/20221213205442; then echo "Directory does not exist '/var/www/pooriar/releases/20221213205442'" 1>&2; false; fi
+  INFO [8620a2f9] Running /usr/bin/env echo "" > REVISION as root@pooriar.com
+ DEBUG [8620a2f9] Command: cd /var/www/pooriar/releases/20221213205442 && /usr/bin/env echo "" > REVISION
+  INFO [f7859e65] Running /usr/bin/env ln -s /var/www/pooriar/releases/20221213205442 /var/www/pooriar/releases/current as root@pooriar.com
+ DEBUG [f7859e65] Command: /usr/bin/env ln -s /var/www/pooriar/releases/20221213205442 /var/www/pooriar/releases/current
+  INFO [4cd1d91d] Running /usr/bin/env mv /var/www/pooriar/releases/current /var/www/pooriar as root@pooriar.com
+ DEBUG [4cd1d91d] Command: /usr/bin/env mv /var/www/pooriar/releases/current /var/www/pooriar
+  INFO [ab70cc5f] Running git pull as root@pooriar.com
+ DEBUG [ab70cc5f] Command: git pull
+ DEBUG [1783e360] Running /usr/bin/env ls -x /var/www/pooriar/releases as root@pooriar.com
+ DEBUG [1783e360] Command: /usr/bin/env ls -x /var/www/pooriar/releases
+ DEBUG [091b3a5d] Running if test ! -d /var/www/pooriar/releases; then echo "Directory does not exist '/var/www/pooriar/releases'" 1>&2; false; fi as root@pooriar.com
+ DEBUG [091b3a5d] Command: if test ! -d /var/www/pooriar/releases; then echo "Directory does not exist '/var/www/pooriar/releases'" 1>&2; false; fi
+  INFO [a7b0e112] Running /usr/bin/env echo "Branch master (at ) deployed as release 20221213205442 by pooria" >> /var/www/pooriar/revisions.log as root@pooriar.com
+ DEBUG [a7b0e112] Command: cd /var/www/pooriar/releases && /usr/bin/env echo "Branch master (at ) deployed as release 20221213205442 by pooria" >> /var/www/pooriar/revisions.log
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-12-13 15:55:58 -0500 cap production git:check
+  INFO ---------------------------------------------------------------------------
+  INFO [3ed3c88e] Running /usr/bin/env mkdir -p /tmp as root@pooriar.com
+ DEBUG [3ed3c88e] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-12-13 15:57:13 -0500 cap production git:check
+  INFO ---------------------------------------------------------------------------
+  INFO [8e32763c] Running /usr/bin/env mkdir -p /tmp as root@pooriar.com
+ DEBUG [8e32763c] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-12-13 15:57:27 -0500 cap production git:check
+  INFO ---------------------------------------------------------------------------
+  INFO [e076c6d1] Running /usr/bin/env mkdir -p /tmp as root@pooriar.com
+ DEBUG [e076c6d1] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-12-13 15:57:47 -0500 cap production git:check
+  INFO ---------------------------------------------------------------------------
+  INFO [1c2694f2] Running /usr/bin/env mkdir -p /tmp as root@pooriar.com
+ DEBUG [1c2694f2] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-12-13 16:01:21 -0500 cap production git:check
+  INFO ---------------------------------------------------------------------------
+  INFO [b4c231ce] Running /usr/bin/env mkdir -p /tmp as root@pooriar.com
+ DEBUG [b4c231ce] Command: /usr/bin/env mkdir -p /tmp
+  INFO [b4c231ce] Finished in 1.336 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-f97b219bc0eda37f799f.sh 0.0%
+  INFO Uploading /tmp/git-ssh-f97b219bc0eda37f799f.sh 100.0%
+  INFO [275438e9] Running /usr/bin/env chmod 700 /tmp/git-ssh-f97b219bc0eda37f799f.sh as root@pooriar.com
+ DEBUG [275438e9] Command: /usr/bin/env chmod 700 /tmp/git-ssh-f97b219bc0eda37f799f.sh
+  INFO [275438e9] Finished in 0.419 seconds with exit status 0 (successful).
+  INFO [4eb8aacf] Running /usr/bin/env git ls-remote git@github.com:pooriar/pooriar.git HEAD as root@pooriar.com
+ DEBUG [4eb8aacf] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-f97b219bc0eda37f799f.sh" ; /usr/bin/env git ls-remote git@github.com:pooriar/pooriar.git HEAD )
+ DEBUG [4eb8aacf] 	git@github.com: Permission denied (publickey).
+ DEBUG [4eb8aacf] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-12-13 16:06:43 -0500 cap production git:check
+  INFO ---------------------------------------------------------------------------
+  INFO [8e5f08ba] Running /usr/bin/env mkdir -p /tmp as root@pooriar.com
+ DEBUG [8e5f08ba] Command: /usr/bin/env mkdir -p /tmp
+  INFO [8e5f08ba] Finished in 1.259 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-7c10dcebb7206dde9097.sh 0.0%
+  INFO Uploading /tmp/git-ssh-7c10dcebb7206dde9097.sh 100.0%
+  INFO [9cab74b6] Running /usr/bin/env chmod 700 /tmp/git-ssh-7c10dcebb7206dde9097.sh as root@pooriar.com
+ DEBUG [9cab74b6] Command: /usr/bin/env chmod 700 /tmp/git-ssh-7c10dcebb7206dde9097.sh
+  INFO [9cab74b6] Finished in 0.367 seconds with exit status 0 (successful).
+  INFO [2eb77246] Running /usr/bin/env git ls-remote git@github.com:pooriar/pooriar.git HEAD as root@pooriar.com
+ DEBUG [2eb77246] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-7c10dcebb7206dde9097.sh" ; /usr/bin/env git ls-remote git@github.com:pooriar/pooriar.git HEAD )
+ DEBUG [2eb77246] 	Warning: Permanently added the ECDSA host key for IP address '140.82.112.4' to the list of known hosts.
+ DEBUG [2eb77246] 	git@github.com: Permission denied (publickey).
+ DEBUG [2eb77246] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.

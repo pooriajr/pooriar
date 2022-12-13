@@ -4,6 +4,14 @@ lock "~> 3.17.1"
 set :application, "pooriar"
 set :repo_url, "git@github.com:pooriar/pooriar.git"
 
+task :pull_master do
+  # Pull the latest code from the Git repository
+  on roles(:web) do
+    execute 'git pull'
+  end
+end
+after "deploy:published", "pull_master"
+
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
