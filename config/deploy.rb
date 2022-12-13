@@ -7,7 +7,8 @@ set :repo_url, "git@github.com:pooriar/pooriar.git"
 task :pull_master do
   # Pull the latest code from the Git repository
   on roles(:web) do
-    execute 'git pull'
+    # execute 'git pull origin master'
+    execute 'bundle exec jekyll build'
   end
 end
 after "deploy:published", "pull_master"
@@ -16,7 +17,7 @@ after "deploy:published", "pull_master"
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-# set :deploy_to, "/var/www/my_app_name"
+set :deploy_to, "/var/www/pooriar"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
