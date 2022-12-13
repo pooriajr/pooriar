@@ -5,7 +5,11 @@ subtitle: Don't tell me what you think, show me what you've done.
 
 {% for project in site.data.projects %}
 <div>
+  {% if project.link %}
   <a href="{{project.link}}"><h3>{{project.name}}</h3></a>
+  {% else %}
+  <h3>{{project.name}} <small style="font-family:monospace; font-weight:200;">(project is dead)</small></h3>
+  {% endif %}
   <p>{{project.description}}</p>
 </div>
 {% endfor %}

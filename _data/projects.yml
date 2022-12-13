@@ -1,9 +1,13 @@
+- name: 🎨 AI Muse
+  link: https://aimuse.me
+  description: Transform yourself into masterpieces painted by the great artists.
+
 - name: ⚫️ Undrift
-  link: https://undrift.me
+  # link: https://undrift.me
   description: Don't let important relationships drift away.
 
 - name: 💙 Fan Favorite
-  link: https://fanfavorite.io
+  # link: https://fanfavorite.io (dead link 💀)
   description: Ridiculously frictionless open polls for creators and their audience.
 
 - name: 📱 Mobile First
@@ -11,7 +15,7 @@
   description: A tiny stylesheet to help you keep mobile in mind while building on desktop.
 
 - name: 🏃‍♂️One Week To Make
-  link: https://oneweektomake.com
+  # link: https://oneweektomake.com
   description: The internet gave me app ideas and voted on their favorites. I built the winner in 1 week.
 
 - name: 🗓 Habit Helper
