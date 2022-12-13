@@ -15,3 +15,5 @@ end
 group :development do
   gem "capistrano", "~> 3.17", require: false
 end
+
+gem 'capistrano-jekyll'

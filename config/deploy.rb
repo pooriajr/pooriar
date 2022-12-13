@@ -7,13 +7,13 @@ set :repo_url, "git@github.com:pooriar/pooriar.git"
 task :pull_master do
   # Pull the latest code from the Git repository
   on roles(:web) do
-    within release_path do
+    within "/var/www/pooriar/current" do
       # execute 'git pull origin master'
       execute 'bundle exec jekyll build'
     end
   end
 end
-after "deploy:published", "pull_master"
+after "deploy:finished", "pull_master"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
