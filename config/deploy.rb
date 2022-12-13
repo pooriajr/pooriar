@@ -9,7 +9,7 @@ task :jekyll_build do
   on roles(:web) do
     within "/var/www/pooriar/current" do
       # execute 'git pull origin master'
-      execute :jekyll, 'build'
+      execute :bundle, :exec, :jekyll, 'build'
     end
   end
 end
