@@ -13,7 +13,7 @@ task :pull_master do
     end
   end
 end
-after "deploy:finished", "pull_master"
+# after "deploy:finished", "pull_master"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp

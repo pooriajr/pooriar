@@ -1437,3 +1437,34 @@ and the repository exists.
   INFO [ea3f4863] Running bundle exec jekyll build as root@pooriar.com
  DEBUG [ea3f4863] Command: bundle exec jekyll build
  DEBUG [ea3f4863] 	Could not locate Gemfile or .bundle/ directory
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-12-13 17:01:10 -0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [de559530] Running /usr/bin/env mkdir -p /tmp as root@pooriar.com
+ DEBUG [de559530] Command: /usr/bin/env mkdir -p /tmp
+  INFO [de559530] Finished in 1.292 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-ebbeb8f8485c1ebc7eed.sh 0.0%
+  INFO Uploading /tmp/git-ssh-ebbeb8f8485c1ebc7eed.sh 100.0%
+  INFO [258c7f99] Running /usr/bin/env chmod 700 /tmp/git-ssh-ebbeb8f8485c1ebc7eed.sh as root@pooriar.com
+ DEBUG [258c7f99] Command: /usr/bin/env chmod 700 /tmp/git-ssh-ebbeb8f8485c1ebc7eed.sh
+  INFO [258c7f99] Finished in 0.364 seconds with exit status 0 (successful).
+  INFO [7b79e065] Running /usr/bin/env git ls-remote git@github.com:pooriar/pooriar.git HEAD as root@pooriar.com
+ DEBUG [7b79e065] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ebbeb8f8485c1ebc7eed.sh" ; /usr/bin/env git ls-remote git@github.com:pooriar/pooriar.git HEAD )
+ DEBUG [7b79e065] 	4228fded4b2e11fcef9608200fce1726432166b2	HEAD
+  INFO [7b79e065] Finished in 1.372 seconds with exit status 0 (successful).
+  INFO [476a9985] Running /usr/bin/env mkdir -p /var/www/pooriar/shared /var/www/pooriar/releases as root@pooriar.com
+ DEBUG [476a9985] Command: /usr/bin/env mkdir -p /var/www/pooriar/shared /var/www/pooriar/releases
+  INFO [476a9985] Finished in 0.383 seconds with exit status 0 (successful).
+ DEBUG [0e162324] Running [ -f /var/www/pooriar/current/REVISION ] as root@pooriar.com
+ DEBUG [0e162324] Command: [ -f /var/www/pooriar/current/REVISION ]
+ DEBUG [0e162324] Finished in 0.361 seconds with exit status 0 (successful).
+ DEBUG [74dad07b] Running /usr/bin/env cat /var/www/pooriar/current/REVISION 2>/dev/null as root@pooriar.com
+ DEBUG [74dad07b] Command: /usr/bin/env cat /var/www/pooriar/current/REVISION 2>/dev/null
+ DEBUG [74dad07b] 	d41c18d193b9213d31760466c3846d2b6939aa48
+ DEBUG [74dad07b] Finished in 0.406 seconds with exit status 0 (successful).
+ DEBUG [6866555d] Running [ -f /var/www/pooriar/repo/HEAD ] as root@pooriar.com
+ DEBUG [6866555d] Command: [ -f /var/www/pooriar/repo/HEAD ]
+ DEBUG [6866555d] Finished in 0.359 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/pooriar/repo
+ DEBUG [23d26c24] Running if test ! -d /var/www/pooriar/repo; then echo "Directory does not exist '/var/www/pooriar/repo'" 1>&2; false; fi as root@pooriar.com
+ DEBUG [23d26c24] Command: if test ! -d /var/www/pooriar/repo; then echo "Directory does not exist '/var/www/pooriar/repo'" 1>&2; false; fi
