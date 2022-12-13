@@ -1,14 +1,15 @@
 ---
-heading: One sentence book reviews
-subtitle: Well that's not very useful.
+heading: My Favorite Books
 ---
-Siddhartha: How can a mere mortal write such a book?
 
-Dark Tower: Thank you Stephen, very cool!
+Siddhartha
 
-Sapiens: Taught me more than 12 years of history classes.
+Dark Tower
 
-Skin in The Game: He's kind of an asshole, but he's kind of right.
+The Stand (Like getting front row tickets to an alternate reality)
 
-Finite and Infinite Games: 2deep4me
+Sapiens (Taught me more than 12 years of history classes.)
 
+Skin in The Game
+
+The Iliad
