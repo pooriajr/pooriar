@@ -1779,3 +1779,115 @@ and the repository exists.
  DEBUG [af53f92a] 	Don't run Bundler as root. Bundler can ask for sudo if it is needed, and
 installing your bundle as root will break this application for all non-root
 users on this machine.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-12-13 17:13:47 -0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [e4dea8dc] Running /usr/bin/env mkdir -p /tmp as root@pooriar.com
+ DEBUG [e4dea8dc] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp )
+  INFO [e4dea8dc] Finished in 2.027 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-6830d29ecf26efcfe685.sh 0.0%
+  INFO Uploading /tmp/git-ssh-6830d29ecf26efcfe685.sh 100.0%
+  INFO [051372ac] Running /usr/bin/env chmod 700 /tmp/git-ssh-6830d29ecf26efcfe685.sh as root@pooriar.com
+ DEBUG [051372ac] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env chmod 700 /tmp/git-ssh-6830d29ecf26efcfe685.sh )
+  INFO [051372ac] Finished in 0.633 seconds with exit status 0 (successful).
+  INFO [818f2117] Running /usr/bin/env git ls-remote git@github.com:pooriar/pooriar.git HEAD as root@pooriar.com
+ DEBUG [818f2117] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-6830d29ecf26efcfe685.sh" ; /usr/bin/env git ls-remote git@github.com:pooriar/pooriar.git HEAD )
+ DEBUG [818f2117] 	6125eb8c05eafed27cf7c5df244413b6a0ed54fa	HEAD
+  INFO [818f2117] Finished in 1.535 seconds with exit status 0 (successful).
+  INFO [5fead1a0] Running /usr/bin/env mkdir -p /var/www/pooriar/shared /var/www/pooriar/releases as root@pooriar.com
+ DEBUG [5fead1a0] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /var/www/pooriar/shared /var/www/pooriar/releases )
+  INFO [5fead1a0] Finished in 0.610 seconds with exit status 0 (successful).
+  INFO [c4e5f161] Running /usr/bin/env mkdir -p /var/www/pooriar/shared/.bundle as root@pooriar.com
+ DEBUG [c4e5f161] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /var/www/pooriar/shared/.bundle )
+  INFO [c4e5f161] Finished in 0.610 seconds with exit status 0 (successful).
+ DEBUG [c37022ea] Running [ -f /var/www/pooriar/current/REVISION ] as root@pooriar.com
+ DEBUG [c37022ea] Command: [ -f /var/www/pooriar/current/REVISION ]
+ DEBUG [c37022ea] Finished in 0.540 seconds with exit status 0 (successful).
+ DEBUG [1749ad6b] Running /usr/bin/env cat /var/www/pooriar/current/REVISION 2>/dev/null as root@pooriar.com
+ DEBUG [1749ad6b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env cat /var/www/pooriar/current/REVISION 2>/dev/null )
+ DEBUG [1749ad6b] 	d41c18d193b9213d31760466c3846d2b6939aa48
+ DEBUG [1749ad6b] Finished in 0.584 seconds with exit status 0 (successful).
+ DEBUG [ec9dd951] Running [ -f /var/www/pooriar/repo/HEAD ] as root@pooriar.com
+ DEBUG [ec9dd951] Command: [ -f /var/www/pooriar/repo/HEAD ]
+ DEBUG [ec9dd951] Finished in 0.610 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/pooriar/repo
+ DEBUG [d47ec191] Running if test ! -d /var/www/pooriar/repo; then echo "Directory does not exist '/var/www/pooriar/repo'" 1>&2; false; fi as root@pooriar.com
+ DEBUG [d47ec191] Command: if test ! -d /var/www/pooriar/repo; then echo "Directory does not exist '/var/www/pooriar/repo'" 1>&2; false; fi
+ DEBUG [d47ec191] Finished in 0.567 seconds with exit status 0 (successful).
+  INFO [ccb387e1] Running /usr/bin/env git remote set-url origin git@github.com:pooriar/pooriar.git as root@pooriar.com
+ DEBUG [ccb387e1] Command: cd /var/www/pooriar/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-6830d29ecf26efcfe685.sh" ; /usr/bin/env git remote set-url origin git@github.com:pooriar/pooriar.git )
+  INFO [ccb387e1] Finished in 0.656 seconds with exit status 0 (successful).
+  INFO [8c6a4786] Running /usr/bin/env git remote update --prune as root@pooriar.com
+ DEBUG [8c6a4786] Command: cd /var/www/pooriar/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-6830d29ecf26efcfe685.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [8c6a4786] 	Fetching origin
+ DEBUG [8c6a4786] 	From github.com:pooriar/pooriar
+ DEBUG [8c6a4786] 	   d8a0564..6125eb8  master     -> master
+  INFO [8c6a4786] Finished in 1.738 seconds with exit status 0 (successful).
+ DEBUG [b1d2f5af] Running if test ! -d /var/www/pooriar/repo; then echo "Directory does not exist '/var/www/pooriar/repo'" 1>&2; false; fi as root@pooriar.com
+ DEBUG [b1d2f5af] Command: if test ! -d /var/www/pooriar/repo; then echo "Directory does not exist '/var/www/pooriar/repo'" 1>&2; false; fi
+ DEBUG [b1d2f5af] Finished in 0.591 seconds with exit status 0 (successful).
+  INFO [27266eab] Running /usr/bin/env mkdir -p /var/www/pooriar/releases/20221213221355 as root@pooriar.com
+ DEBUG [27266eab] Command: cd /var/www/pooriar/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-6830d29ecf26efcfe685.sh" ; /usr/bin/env mkdir -p /var/www/pooriar/releases/20221213221355 )
+  INFO [27266eab] Finished in 0.629 seconds with exit status 0 (successful).
+  INFO [8e67a8cc] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/pooriar/releases/20221213221355 as root@pooriar.com
+ DEBUG [8e67a8cc] Command: cd /var/www/pooriar/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-6830d29ecf26efcfe685.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/pooriar/releases/20221213221355 )
+  INFO [8e67a8cc] Finished in 0.924 seconds with exit status 0 (successful).
+ DEBUG [4e1408ed] Running if test ! -d /var/www/pooriar/repo; then echo "Directory does not exist '/var/www/pooriar/repo'" 1>&2; false; fi as root@pooriar.com
+ DEBUG [4e1408ed] Command: if test ! -d /var/www/pooriar/repo; then echo "Directory does not exist '/var/www/pooriar/repo'" 1>&2; false; fi
+ DEBUG [4e1408ed] Finished in 0.709 seconds with exit status 0 (successful).
+ DEBUG [ffe49bf8] Running /usr/bin/env git rev-list --max-count=1 master as root@pooriar.com
+ DEBUG [ffe49bf8] Command: cd /var/www/pooriar/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-6830d29ecf26efcfe685.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [ffe49bf8] 	6125eb8c05eafed27cf7c5df244413b6a0ed54fa
+ DEBUG [ffe49bf8] Finished in 0.720 seconds with exit status 0 (successful).
+ DEBUG [0453fc5c] Running if test ! -d /var/www/pooriar/releases/20221213221355; then echo "Directory does not exist '/var/www/pooriar/releases/20221213221355'" 1>&2; false; fi as root@pooriar.com
+ DEBUG [0453fc5c] Command: if test ! -d /var/www/pooriar/releases/20221213221355; then echo "Directory does not exist '/var/www/pooriar/releases/20221213221355'" 1>&2; false; fi
+ DEBUG [0453fc5c] Finished in 0.710 seconds with exit status 0 (successful).
+  INFO [57c34f0b] Running /usr/bin/env echo "6125eb8c05eafed27cf7c5df244413b6a0ed54fa" > REVISION as root@pooriar.com
+ DEBUG [57c34f0b] Command: cd /var/www/pooriar/releases/20221213221355 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env echo "6125eb8c05eafed27cf7c5df244413b6a0ed54fa" > REVISION )
+  INFO [57c34f0b] Finished in 0.568 seconds with exit status 0 (successful).
+  INFO [b89bccc3] Running /usr/bin/env mkdir -p /var/www/pooriar/releases/20221213221355 as root@pooriar.com
+ DEBUG [b89bccc3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /var/www/pooriar/releases/20221213221355 )
+  INFO [b89bccc3] Finished in 0.603 seconds with exit status 0 (successful).
+ DEBUG [b59508dd] Running [ -L /var/www/pooriar/releases/20221213221355/.bundle ] as root@pooriar.com
+ DEBUG [b59508dd] Command: [ -L /var/www/pooriar/releases/20221213221355/.bundle ]
+ DEBUG [b59508dd] Finished in 0.541 seconds with exit status 1 (failed).
+ DEBUG [3f3a9ed9] Running [ -d /var/www/pooriar/releases/20221213221355/.bundle ] as root@pooriar.com
+ DEBUG [3f3a9ed9] Command: [ -d /var/www/pooriar/releases/20221213221355/.bundle ]
+ DEBUG [3f3a9ed9] Finished in 0.638 seconds with exit status 1 (failed).
+  INFO [034ae79f] Running /usr/bin/env ln -s /var/www/pooriar/shared/.bundle /var/www/pooriar/releases/20221213221355/.bundle as root@pooriar.com
+ DEBUG [034ae79f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /var/www/pooriar/shared/.bundle /var/www/pooriar/releases/20221213221355/.bundle )
+  INFO [034ae79f] Finished in 0.535 seconds with exit status 0 (successful).
+ DEBUG [28e7645d] Running if test ! -d /var/www/pooriar/releases/20221213221355; then echo "Directory does not exist '/var/www/pooriar/releases/20221213221355'" 1>&2; false; fi as root@pooriar.com
+ DEBUG [28e7645d] Command: if test ! -d /var/www/pooriar/releases/20221213221355; then echo "Directory does not exist '/var/www/pooriar/releases/20221213221355'" 1>&2; false; fi
+ DEBUG [28e7645d] Finished in 0.583 seconds with exit status 0 (successful).
+  INFO [429bcc28] Running /usr/bin/env jekyll build as root@pooriar.com
+ DEBUG [429bcc28] Command: cd /var/www/pooriar/releases/20221213221355 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env jekyll build )
+ DEBUG [429bcc28] 	/var/lib/gems/2.7.0/gems/bundler-2.3.26/lib/bundler/definition.rb:403:in `ensure_equivalent_gemfile_and_lockfile'
+ DEBUG [429bcc28] 	: 
+ DEBUG [429bcc28] 	You are trying to install in deployment mode after changing
+ DEBUG [429bcc28] 	 (
+ DEBUG [429bcc28] 	Bundler::ProductionError
+ DEBUG [429bcc28] 	)
+ DEBUG [429bcc28] 	
+ DEBUG [429bcc28] 	your Gemfile. Run `bundle install` elsewhere and add the
+updated Gemfile.lock to version control.
+
+If this is a development machine, remove the /var/www/pooriar/releases/20221213221355/Gemfile freeze 
+by running `bundle config unset deployment`.
+
+The dependencies in your gemfile changed
+
+You have added to the Gemfile:
+* capistrano (~> 3.9)
+* capistrano-rbenv (~> 2.2)
+
+You have deleted from the Gemfile:
+* capistrano (~> 3.6)
+* capistrano-bundler (~> 2.0)
+ DEBUG [429bcc28] 		from /var/lib/gems/2.7.0/gems/bundler-2.3.26/lib/bundler/runtime.rb:13:in `setup'
+ DEBUG [429bcc28] 		from /var/lib/gems/2.7.0/gems/bundler-2.3.26/lib/bundler.rb:161:in `setup'
+ DEBUG [429bcc28] 		from /var/lib/gems/2.7.0/gems/jekyll-4.3.1/lib/jekyll/plugin_manager.rb:52:in `require_from_bundler'
+ DEBUG [429bcc28] 		from /var/lib/gems/2.7.0/gems/jekyll-4.3.1/exe/jekyll:11:in `<top (required)>'
+ DEBUG [429bcc28] 		from /usr/local/bin/jekyll:23:in `load'
+ DEBUG [429bcc28] 		from /usr/local/bin/jekyll:23:in `<main>'
