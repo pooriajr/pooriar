@@ -12,3 +12,6 @@ group :jekyll_plugins do
   gem 'jekyll-timeago'
 end
 
+group :development do
+  gem "capistrano", "~> 3.17", require: false
+end
