@@ -10,6 +10,8 @@ GEM
       i18n
       rake (>= 10.0.0)
       sshkit (>= 1.9.0)
+    capistrano-bundler (2.1.0)
+      capistrano (~> 3.1)
     capistrano-jekyll (0.2.2)
       capistrano (~> 3.0, >= 3.0.0)
     colorator (1.1.0)
@@ -91,7 +93,8 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  capistrano (~> 3.17)
+  capistrano (~> 3.6)
+  capistrano-bundler (~> 2.0)
   capistrano-jekyll
   jekyll
   jekyll-compose
