@@ -22,7 +22,7 @@ For me personally, Bachata has helped me face a personal fear of taking up space
 
 Dancers are 99% nice and chill people, so it's super easy to make friends. Plus, the whole environment of social Bachata is that everyone dances with everyone, which makes it easy to break the ice.
 
-It's mixed gender, so unless something like sports and martial arts which typically split genders, you will make friends with both men and women. 
+It's mixed gender, so unlike something like sports and martial arts, which typically split genders, you make friends with both men and women!
 
 And Bachata dance is popular and growing. If you move to a new city, or go traveling, all you need to do is find the local Bachata dance scene and your social needs are met!
 
