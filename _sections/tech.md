@@ -1,10 +1,6 @@
 ---
 heading: Tech
-subtitle: As it steadily consumes all.
+subtitle: Less is more
 ---
 
-I make websites and web applications with HTML, CSS, JS, and Ruby.
-
-Ruby on Rails is my favorite competitive advantage. Thanks DHH!🚂
-
-I use vim for text editing, so of course I had to tell you. 💁‍♀️
+I like using Ruby and Vim, and I do my best to keep things as simple as possible.

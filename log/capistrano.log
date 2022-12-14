@@ -2554,3 +2554,108 @@ You have deleted from the Gemfile:
  DEBUG [fabca6ea] 	                    done in 0.828 seconds.
  DEBUG [fabca6ea] 	 Auto-regeneration: disabled. Use --watch to enable.
   INFO [fabca6ea] Finished in 2.114 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-12-13 18:03:28 -0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [19d7b1af] Running /usr/bin/env mkdir -p /tmp as root@pooriar.com
+ DEBUG [19d7b1af] Command: /usr/bin/env mkdir -p /tmp
+  INFO [19d7b1af] Finished in 1.351 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-3284daba22bff4f3f7f6.sh 0.0%
+  INFO Uploading /tmp/git-ssh-3284daba22bff4f3f7f6.sh 100.0%
+  INFO [82d59af9] Running /usr/bin/env chmod 700 /tmp/git-ssh-3284daba22bff4f3f7f6.sh as root@pooriar.com
+ DEBUG [82d59af9] Command: /usr/bin/env chmod 700 /tmp/git-ssh-3284daba22bff4f3f7f6.sh
+  INFO [82d59af9] Finished in 0.393 seconds with exit status 0 (successful).
+  INFO [4c735c2f] Running /usr/bin/env git ls-remote git@github.com:pooriar/pooriar.git HEAD as root@pooriar.com
+ DEBUG [4c735c2f] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-3284daba22bff4f3f7f6.sh" ; /usr/bin/env git ls-remote git@github.com:pooriar/pooriar.git HEAD )
+ DEBUG [4c735c2f] 	8ba497216fe0cccdc72926a11f46b085ad631c5d	HEAD
+  INFO [4c735c2f] Finished in 1.653 seconds with exit status 0 (successful).
+  INFO [7db3694f] Running /usr/bin/env mkdir -p /var/www/pooriar/shared /var/www/pooriar/releases as root@pooriar.com
+ DEBUG [7db3694f] Command: /usr/bin/env mkdir -p /var/www/pooriar/shared /var/www/pooriar/releases
+  INFO [7db3694f] Finished in 0.609 seconds with exit status 0 (successful).
+ DEBUG [420e6d5a] Running [ -f /var/www/pooriar/current/REVISION ] as root@pooriar.com
+ DEBUG [420e6d5a] Command: [ -f /var/www/pooriar/current/REVISION ]
+ DEBUG [420e6d5a] Finished in 0.583 seconds with exit status 0 (successful).
+ DEBUG [edcc12bd] Running /usr/bin/env cat /var/www/pooriar/current/REVISION 2>/dev/null as root@pooriar.com
+ DEBUG [edcc12bd] Command: /usr/bin/env cat /var/www/pooriar/current/REVISION 2>/dev/null
+ DEBUG [edcc12bd] 	f71eff920c0c04a6d16789e696920e3a5c2e1300
+ DEBUG [edcc12bd] Finished in 0.512 seconds with exit status 0 (successful).
+ DEBUG [7954fd78] Running [ -f /var/www/pooriar/repo/HEAD ] as root@pooriar.com
+ DEBUG [7954fd78] Command: [ -f /var/www/pooriar/repo/HEAD ]
+ DEBUG [7954fd78] Finished in 0.428 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/pooriar/repo
+ DEBUG [4abbc728] Running if test ! -d /var/www/pooriar/repo; then echo "Directory does not exist '/var/www/pooriar/repo'" 1>&2; false; fi as root@pooriar.com
+ DEBUG [4abbc728] Command: if test ! -d /var/www/pooriar/repo; then echo "Directory does not exist '/var/www/pooriar/repo'" 1>&2; false; fi
+ DEBUG [4abbc728] Finished in 0.799 seconds with exit status 0 (successful).
+  INFO [5811b0fb] Running /usr/bin/env git remote set-url origin git@github.com:pooriar/pooriar.git as root@pooriar.com
+ DEBUG [5811b0fb] Command: cd /var/www/pooriar/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-3284daba22bff4f3f7f6.sh" ; /usr/bin/env git remote set-url origin git@github.com:pooriar/pooriar.git )
+  INFO [5811b0fb] Finished in 1.354 seconds with exit status 0 (successful).
+  INFO [14130930] Running /usr/bin/env git remote update --prune as root@pooriar.com
+ DEBUG [14130930] Command: cd /var/www/pooriar/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-3284daba22bff4f3f7f6.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [14130930] 	Fetching origin
+ DEBUG [14130930] 	From github.com:pooriar/pooriar
+   f71eff9..8ba4972  master     -> master
+  INFO [14130930] Finished in 6.051 seconds with exit status 0 (successful).
+ DEBUG [36a9500b] Running if test ! -d /var/www/pooriar/repo; then echo "Directory does not exist '/var/www/pooriar/repo'" 1>&2; false; fi as root@pooriar.com
+ DEBUG [36a9500b] Command: if test ! -d /var/www/pooriar/repo; then echo "Directory does not exist '/var/www/pooriar/repo'" 1>&2; false; fi
+ DEBUG [36a9500b] Finished in 0.726 seconds with exit status 0 (successful).
+  INFO [f69c6e36] Running /usr/bin/env mkdir -p /var/www/pooriar/releases/20221213230334 as root@pooriar.com
+ DEBUG [f69c6e36] Command: cd /var/www/pooriar/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-3284daba22bff4f3f7f6.sh" ; /usr/bin/env mkdir -p /var/www/pooriar/releases/20221213230334 )
+  INFO [f69c6e36] Finished in 0.423 seconds with exit status 0 (successful).
+  INFO [8469c4b7] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/pooriar/releases/20221213230334 as root@pooriar.com
+ DEBUG [8469c4b7] Command: cd /var/www/pooriar/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-3284daba22bff4f3f7f6.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/pooriar/releases/20221213230334 )
+  INFO [8469c4b7] Finished in 0.503 seconds with exit status 0 (successful).
+ DEBUG [dcecbe16] Running if test ! -d /var/www/pooriar/repo; then echo "Directory does not exist '/var/www/pooriar/repo'" 1>&2; false; fi as root@pooriar.com
+ DEBUG [dcecbe16] Command: if test ! -d /var/www/pooriar/repo; then echo "Directory does not exist '/var/www/pooriar/repo'" 1>&2; false; fi
+ DEBUG [dcecbe16] Finished in 0.419 seconds with exit status 0 (successful).
+ DEBUG [09cbe91b] Running /usr/bin/env git rev-list --max-count=1 master as root@pooriar.com
+ DEBUG [09cbe91b] Command: cd /var/www/pooriar/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-3284daba22bff4f3f7f6.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [09cbe91b] 	8ba497216fe0cccdc72926a11f46b085ad631c5d
+ DEBUG [09cbe91b] Finished in 0.359 seconds with exit status 0 (successful).
+ DEBUG [9ceb20f3] Running if test ! -d /var/www/pooriar/releases/20221213230334; then echo "Directory does not exist '/var/www/pooriar/releases/20221213230334'" 1>&2; false; fi as root@pooriar.com
+ DEBUG [9ceb20f3] Command: if test ! -d /var/www/pooriar/releases/20221213230334; then echo "Directory does not exist '/var/www/pooriar/releases/20221213230334'" 1>&2; false; fi
+ DEBUG [9ceb20f3] Finished in 0.361 seconds with exit status 0 (successful).
+  INFO [ebb36f16] Running /usr/bin/env echo "8ba497216fe0cccdc72926a11f46b085ad631c5d" > REVISION as root@pooriar.com
+ DEBUG [ebb36f16] Command: cd /var/www/pooriar/releases/20221213230334 && /usr/bin/env echo "8ba497216fe0cccdc72926a11f46b085ad631c5d" > REVISION
+  INFO [ebb36f16] Finished in 0.358 seconds with exit status 0 (successful).
+  INFO [0c535fa7] Running /usr/bin/env ln -s /var/www/pooriar/releases/20221213230334 /var/www/pooriar/releases/current as root@pooriar.com
+ DEBUG [0c535fa7] Command: /usr/bin/env ln -s /var/www/pooriar/releases/20221213230334 /var/www/pooriar/releases/current
+  INFO [0c535fa7] Finished in 0.357 seconds with exit status 0 (successful).
+  INFO [c37c0c37] Running /usr/bin/env mv /var/www/pooriar/releases/current /var/www/pooriar as root@pooriar.com
+ DEBUG [c37c0c37] Command: /usr/bin/env mv /var/www/pooriar/releases/current /var/www/pooriar
+  INFO [c37c0c37] Finished in 0.351 seconds with exit status 0 (successful).
+ DEBUG [02c6d692] Running /usr/bin/env ls -x /var/www/pooriar/releases as root@pooriar.com
+ DEBUG [02c6d692] Command: /usr/bin/env ls -x /var/www/pooriar/releases
+ DEBUG [02c6d692] 	20221213222544	20221213222841	20221213223324	20221213224523	20221213224742
+20221213230334
+ DEBUG [02c6d692] Finished in 0.358 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on pooriar.com
+ DEBUG [6ee4427d] Running [ -d /var/www/pooriar/current ] as root@pooriar.com
+ DEBUG [6ee4427d] Command: [ -d /var/www/pooriar/current ]
+ DEBUG [6ee4427d] Finished in 0.361 seconds with exit status 0 (successful).
+ DEBUG [a76d169b] Running /usr/bin/env readlink /var/www/pooriar/current as root@pooriar.com
+ DEBUG [a76d169b] Command: /usr/bin/env readlink /var/www/pooriar/current
+ DEBUG [a76d169b] 	/var/www/pooriar/releases/20221213230334
+ DEBUG [a76d169b] Finished in 0.359 seconds with exit status 0 (successful).
+  INFO [43dd3303] Running /usr/bin/env rm -rf /var/www/pooriar/releases/20221213222544 as root@pooriar.com
+ DEBUG [43dd3303] Command: /usr/bin/env rm -rf /var/www/pooriar/releases/20221213222544
+  INFO [43dd3303] Finished in 0.379 seconds with exit status 0 (successful).
+ DEBUG [c6f85f22] Running if test ! -d /var/www/pooriar/releases; then echo "Directory does not exist '/var/www/pooriar/releases'" 1>&2; false; fi as root@pooriar.com
+ DEBUG [c6f85f22] Command: if test ! -d /var/www/pooriar/releases; then echo "Directory does not exist '/var/www/pooriar/releases'" 1>&2; false; fi
+ DEBUG [c6f85f22] Finished in 0.360 seconds with exit status 0 (successful).
+  INFO [6e44eb72] Running /usr/bin/env echo "Branch master (at 8ba497216fe0cccdc72926a11f46b085ad631c5d) deployed as release 20221213230334 by pooria" >> /var/www/pooriar/revisions.log as root@pooriar.com
+ DEBUG [6e44eb72] Command: cd /var/www/pooriar/releases && /usr/bin/env echo "Branch master (at 8ba497216fe0cccdc72926a11f46b085ad631c5d) deployed as release 20221213230334 by pooria" >> /var/www/pooriar/revisions.log
+  INFO [6e44eb72] Finished in 0.358 seconds with exit status 0 (successful).
+ DEBUG [43aeb166] Running if test ! -d /var/www/pooriar/current; then echo "Directory does not exist '/var/www/pooriar/current'" 1>&2; false; fi as root@pooriar.com
+ DEBUG [43aeb166] Command: if test ! -d /var/www/pooriar/current; then echo "Directory does not exist '/var/www/pooriar/current'" 1>&2; false; fi
+ DEBUG [43aeb166] Finished in 0.382 seconds with exit status 0 (successful).
+  INFO [52b64f8a] Running /usr/bin/env bundle exec jekyll build as root@pooriar.com
+ DEBUG [52b64f8a] Command: cd /var/www/pooriar/current && /usr/bin/env bundle exec jekyll build
+ DEBUG [52b64f8a] 	Configuration file: /var/www/pooriar/releases/20221213230334/_config.yml
+ DEBUG [52b64f8a] 	            Source: /var/www/pooriar/releases/20221213230334
+ DEBUG [52b64f8a] 	       Destination: /var/www/pooriar/releases/20221213230334/_site
+ DEBUG [52b64f8a] 	 Incremental build: disabled. Enable with --incremental
+ DEBUG [52b64f8a] 	      Generating... 
+ DEBUG [52b64f8a] 	       Jekyll Feed: Generating feed for posts
+ DEBUG [52b64f8a] 	                    done in 0.824 seconds.
+ DEBUG [52b64f8a] 	 Auto-regeneration: disabled. Use --watch to enable.
+  INFO [52b64f8a] Finished in 2.339 seconds with exit status 0 (successful).

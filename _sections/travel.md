@@ -15,5 +15,5 @@ subtitle: I've been lucky to see so much of the world.
 
 🇨🇷 Lived in a 100-person camp in the jungle of Costa Rica for 3 weeks. Felt like a TV-show.
 
-🇨🇴 I'm in Colombia now!📍
+🇨🇴 I'm in Colombia now, been here for almost 2 years!📍
 
