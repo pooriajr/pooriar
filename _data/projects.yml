@@ -1,5 +1,5 @@
 - name: 🎨 AI Muse
-  link: https://aimuse.me
+  # link: https://aimuse.me
   description: Transform yourself into masterpieces painted by the great artists.
 
 - name: ⚫️ Undrift
@@ -7,7 +7,7 @@
   description: Don't let important relationships drift away.
 
 - name: 💙 Fan Favorite
-  # link: https://fanfavorite.io (dead link 💀)
+  # link: https://fanfavorite.io 
   description: Ridiculously frictionless open polls for creators and their audience.
 
 - name: 📱 Mobile First
